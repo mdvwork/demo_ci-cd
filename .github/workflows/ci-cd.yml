@@ -10,10 +10,6 @@ on:
 permissions:
   contents: read
 
-concurrency:
-  group: lesson-${{ github.ref }}
-  cancel-in-progress: false
-
 jobs:
   check-build:
     runs-on: ubuntu-latest
