@@ -2,7 +2,7 @@
 
 ## Содержимое
 
-- `STUDENT_TASK.md` — задание на 24 минуты и критерии.
+- `STUDENT_TASK.md` — задание и критерии.
 - `demo/` — исходный проект с работающими тестами и CI.
 - `workflow_templates/ci.yml.txt` — CI для копирования через веб-интерфейс.
 - `workflow_templates/ci-cd.yml.txt` — полная замена CI для показа публикации GitHub Pages.
