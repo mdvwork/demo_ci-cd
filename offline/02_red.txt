@@ -1,0 +1,23 @@
+LOCAL RUN — not GitHub Actions
+Command: python -m unittest discover -s tests -v
+
+test_heading (test_site.SiteTests.test_heading) ... ok
+test_lesson_topic (test_site.SiteTests.test_lesson_topic) ... ok
+test_stylesheet_exists (test_site.SiteTests.test_stylesheet_exists) ... 
+  test_stylesheet_exists (test_site.SiteTests.test_stylesheet_exists) (href='missing.css') ... FAIL
+test_title (test_site.SiteTests.test_title) ... ok
+
+======================================================================
+FAIL: test_stylesheet_exists (test_site.SiteTests.test_stylesheet_exists) (href='missing.css')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/tmpmkadjg3a/demo/tests/test_site.py", line 54, in test_stylesheet_exists
+    self.assertTrue(bool(href) and (SITE / href).is_file(),
+AssertionError: False is not true : Missing stylesheet: missing.css
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.001s
+
+FAILED (failures=1)
+
+Exit code: 1

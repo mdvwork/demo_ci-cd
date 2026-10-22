@@ -1,0 +1,33 @@
+name: Lesson CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get repository
+        uses: actions/checkout@v7
+      - name: Prepare Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Run tests
+        run: python -m unittest discover -s tests -v
+      - name: Build site
+        run: python build.py
+      - name: Save site artifact
+        uses: actions/upload-artifact@v7
+        with:
+          name: lesson-site
+          path: dist/
+          if-no-files-found: error
+          retention-days: 3

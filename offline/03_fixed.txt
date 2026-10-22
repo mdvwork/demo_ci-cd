@@ -1,0 +1,14 @@
+LOCAL RUN — not GitHub Actions
+Command: python -m unittest discover -s tests -v
+
+test_heading (test_site.SiteTests.test_heading) ... ok
+test_lesson_topic (test_site.SiteTests.test_lesson_topic) ... ok
+test_stylesheet_exists (test_site.SiteTests.test_stylesheet_exists) ... ok
+test_title (test_site.SiteTests.test_title) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.001s
+
+OK
+
+Exit code: 0
