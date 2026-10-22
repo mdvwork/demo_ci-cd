@@ -14,10 +14,6 @@ concurrency:
   group: lesson-${{ github.ref }}
   cancel-in-progress: false
 
-  defaults:
-  run:
-    working-directory: demo
-
 jobs:
   check-build:
     runs-on: ubuntu-latest
